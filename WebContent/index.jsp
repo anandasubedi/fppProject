@@ -13,7 +13,7 @@
 	<div class="panel panel-primary" style="margin: 20px 20px 20px 20px;">
 		<div class="panel-heading" style="text-align: center;">Shopping List</div>
 	  	<div class="panel-body">
-	    Panel content nasooososoososo
+	    Panel contentsdfdsfsd
 	  	</div>
 	  	<div class="panel-footer" style="text-align: center;">Created by SAKA Team. July 2015</div>
 	</div>
