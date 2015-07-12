@@ -8,5 +8,6 @@
 </head>
 <body>
 	Welcome to our shopping list application
+	We are working on our FPP project.
 </body>
 </html>
