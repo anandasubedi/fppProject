@@ -89,8 +89,8 @@
 			</tbody>
 		</table>
 			<div id="button_print" style="text-align: right;margin-top: 20px;">
-				<button type="button" class="btn btn-default"><span class="glyphicon glyphicon-print" aria-hidden="true"></span> Print All Items</button>
-				<button type="button" class="btn btn-success"><span class="glyphicon glyphicon-print" aria-hidden="true"></span> Print Items To Buy</button>
+				<a href="http://localhost:8080/SAKA_ShoppingList/Print.jsp" target="blank" type="button" class="btn btn-default"><span class="glyphicon glyphicon-print" aria-hidden="true"></span> Print All Items</a>
+				<a href="http://localhost:8080/SAKA_ShoppingList/Print.jsp" target="blank" type="button" class="btn btn-success"><span class="glyphicon glyphicon-print" aria-hidden="true"></span> Print Items To Buy</a>
 			</div>
 			
 	  	</div>
