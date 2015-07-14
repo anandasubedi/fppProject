@@ -22,7 +22,11 @@
 			
 			<div class="row">
 			  <div class="col-xs-9 col-sm-10 col-md-11"><h4><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span> Shopping List</h4></div>
-			  <div class="col-xs-3 col-sm-12 col-md-1"><h4><a href="" style="color: white;"  data-toggle="modal" data-target="#add_new"><span class="glyphicon glyphicon-plus aria-hidden="true"></span></a></h4></div>
+			  <div class="col-xs-3 col-sm-12 col-md-1">
+			  	<h5>
+			  		<button type="button" class="btn btn-danger" data-toggle="modal" data-target="#add_new">Add <span class="glyphicon glyphicon-plus aria-hidden="true"></span></button>
+			  	</h5>
+			 </div>
 			</div>
 			
 		</div>
@@ -47,7 +51,7 @@
 	                <td>Beef</td>
 	                <td>Meat</td>
 	                <td>High</td>
-	                <td><a href="">Edit</a></td>
+	                <td><a class href="">Edit</a></td>
 	                <td><a href=""><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></a></td>
 	               	
 	                
