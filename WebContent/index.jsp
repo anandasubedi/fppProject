@@ -21,7 +21,7 @@
 		<div class="panel-heading" style="text-align: center;">	
 			
 			<div class="row">
-			  <div class="col-xs-9 col-sm-10 col-md-11"><h4>Shopping List</h4></div>
+			  <div class="col-xs-9 col-sm-10 col-md-11"><h4><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span> Shopping List</h4></div>
 			  <div class="col-xs-3 col-sm-12 col-md-1"><h4><a href="" style="color: white;"  data-toggle="modal" data-target="#add_new"><span class="glyphicon glyphicon-plus aria-hidden="true"></span></a></h4></div>
 			</div>
 			
@@ -40,7 +40,10 @@
 	        </thead>
 	        <tbody>
 	            <tr>
-	            	<td><span class="glyphicon glyphicon-ok aria-hidden="true"></span></a></td>
+	            	<td>
+	            		<span class="glyphicon glyphicon-ok aria-hidden="true"></span>
+	            		<span style="visibility: hidden;">B</span>
+	            	</td>
 	                <td>Beef</td>
 	                <td>Meat</td>
 	                <td>High</td>
@@ -50,7 +53,10 @@
 	                
 	            </tr>
 	            <tr>
-	            	<td><span class="glyphicon glyphicon-minus aria-hidden="true"></span></a></td>
+	            	<td>
+	            		<span class="glyphicon glyphicon-minus aria-hidden="true"></span>
+	            		<span style="visibility: hidden;">N</span>
+	            	</td>
 	                <td>Salad</td>
 	                <td>Vegetable</td>
 	                <td>Normal</td>
@@ -59,7 +65,10 @@
 	          
 	            </tr>
 	            <tr>
-	            	<td><span class="glyphicon glyphicon-ok aria-hidden="true"></span></a></td>
+	            	<td>
+	            		<span class="glyphicon glyphicon-ok aria-hidden="true"></span>
+	            		<span style="visibility: hidden;">B</span>
+	            	</td>
 	                <td>Chicken</td>
 	                <td>Meat</td>
 	                <td>Low</td>
@@ -67,7 +76,10 @@
 	                <td><a href=""><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></a></td>
 	            </tr>
 	            <tr>
-	            	<td><span class="glyphicon glyphicon-minus aria-hidden="true"></span></a></td>
+	            	<td>
+	            		<span class="glyphicon glyphicon-minus aria-hidden="true"></span>
+	            		<span style="visibility: hidden;">N</span>
+	            	</td>
 	                <td>Salad</td>
 	                <td>Vegetable</td>
 	                <td>High</td>
@@ -76,6 +88,11 @@
 	            </tr>
 			</tbody>
 		</table>
+			<div id="button_print" style="text-align: right;margin-top: 20px;">
+				<button type="button" class="btn btn-default"><span class="glyphicon glyphicon-print" aria-hidden="true"></span> Print All Items</button>
+				<button type="button" class="btn btn-success"><span class="glyphicon glyphicon-print" aria-hidden="true"></span> Print Items To Buy</button>
+			</div>
+			
 	  	</div>
 	  	<div class="panel-footer" style="text-align: center;">Created by SAKA Team. July 2015</div>
 	</div>
@@ -96,7 +113,7 @@
 			    </div>
 			  </div>
 			  <div class="form-group">
-			    <label for="selectCategory" class="col-sm-4 control-label">Item Name</label>
+			    <label for="selectCategory" class="col-sm-4 control-label">Item Category</label>
 			    <div class="col-sm-8">
 			      <select id="selectCategory" class="selectpicker">
 				    <option>Drink</option>
@@ -139,5 +156,19 @@
 	    </div><!-- /.modal-content -->
 	  </div><!-- /.modal-dialog -->
 	</div><!-- /.modal -->
+	<script>
+		$(document).ready(function() {
+		    $('#all_list').DataTable
+		    (
+		    	{
+		    		"aoColumnDefs": [
+		    		                 { 'bSortable': false, 'aTargets': [4,5]  }
+		    		              ]
+		    	}
+	    		
+		    );
+		    
+		} );
+	</script>
 </body>
 </html>
