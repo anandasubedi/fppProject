@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -24,7 +25,10 @@
 			  <div class="col-xs-9 col-sm-10 col-md-11"><h4><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span> Shopping List</h4></div>
 			  <div class="col-xs-3 col-sm-12 col-md-1">
 			  	<h5>
-			  		<button type="button" class="btn btn-danger" data-toggle="modal" data-target="#add_new">Add <span class="glyphicon glyphicon-plus aria-hidden="true"></span></button>
+			  		<a href="addItem">
+			  		<button type="button" class="btn btn-danger" data-toggle="modal" data-target="#add_new">
+			  		Add <span class="glyphicon glyphicon-plus aria-hidden="true"></span>
+			  		</button></a>
 			  	</h5>
 			 </div>
 			</div>
@@ -43,53 +47,31 @@
 	            </tr>
 	        </thead>
 	        <tbody>
+	        <c:forEach items="${items}" var="item">
 	            <tr>
 	            	<td>
-	            		<span class="glyphicon glyphicon-ok aria-hidden="true"></span>
-	            		<span style="visibility: hidden;">B</span>
+	            		<c:choose>
+    					<c:when test="${item.isWishList()==true}">
+        					<span class="glyphicon glyphicon-${item.isWishList()==true?"ok":"minus"} aria-hidden="false"></span>
+    						<span >WishList</span>
+    					</c:when>    
+    					<c:otherwise>
+        					<button class="btn btn-notify">+ Add To WishList</button>
+        				<br />
+    					</c:otherwise>
+						</c:choose>
+	            		
+	            		
+	            		
 	            	</td>
-	                <td>Beef</td>
-	                <td>Meat</td>
+	                <td><c:out value="${item.getName()}"/></td>
+	                <td><c:out value="${item.getCategory().toString()}"/></td>
 	                <td>High</td>
-	                <td><a class href="">Edit</a></td>
-	                <td><a href=""><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></a></td>
-	               	
-	                
+	                <td><a class href="<c:out value="editItem?itemId=${item.getId()}"/>">Edit</a></td>
+	                <td><a href="<c:out value="?action=delete&itemId=${item.getId()}"/>"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></a></td>
+	                          
 	            </tr>
-	            <tr>
-	            	<td>
-	            		<span class="glyphicon glyphicon-minus aria-hidden="true"></span>
-	            		<span style="visibility: hidden;">N</span>
-	            	</td>
-	                <td>Salad</td>
-	                <td>Vegetable</td>
-	                <td>Normal</td>
-	                <td><a href="">Edit</a></td>
-	                <td><a href=""><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></a></td>
-	          
-	            </tr>
-	            <tr>
-	            	<td>
-	            		<span class="glyphicon glyphicon-ok aria-hidden="true"></span>
-	            		<span style="visibility: hidden;">B</span>
-	            	</td>
-	                <td>Chicken</td>
-	                <td>Meat</td>
-	                <td>Low</td>
-	                <td><a href="">Edit</a></td>
-	                <td><a href=""><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></a></td>
-	            </tr>
-	            <tr>
-	            	<td>
-	            		<span class="glyphicon glyphicon-minus aria-hidden="true"></span>
-	            		<span style="visibility: hidden;">N</span>
-	            	</td>
-	                <td>Salad</td>
-	                <td>Vegetable</td>
-	                <td>High</td>
-	                <td><a href="">Edit</a></td>
-	                <td><a href=""><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></a></td>
-	            </tr>
+	            </c:forEach>
 			</tbody>
 		</table>
 			<div id="button_print" style="text-align: right;margin-top: 20px;">
