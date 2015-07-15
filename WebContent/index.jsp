@@ -26,7 +26,7 @@
 			  <div class="col-xs-3 col-sm-12 col-md-1">
 			  	<h5>
 			  		<a href="addItem">
-			  		<button type="button" class="btn btn-danger" data-toggle="modal" data-target="#add_new">
+			  		<button type="button" class="btn btn-danger">
 			  		Add <span class="glyphicon glyphicon-plus aria-hidden="true"></span>
 			  		</button></a>
 			  	</h5>
