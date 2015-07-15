@@ -60,7 +60,7 @@
 			  </div>
 			  <div class="modal-footer">
 			  <input type="hidden" name="itemId" value="${item.getId()}">
-		        <a href="http://localhost:8080/SAKA_ShoppingList/" class="btn btn-default" data-dismiss="modal">Close</a>
+		        <a href="" class="btn btn-default" data-dismiss="modal">Close</a>
 		        <button type="submit" class="btn btn-primary">Save changes</button>
 	      	  </div>
 			</form>

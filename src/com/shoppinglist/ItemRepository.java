@@ -93,5 +93,25 @@ public class ItemRepository {
             e.printStackTrace();
         }
 	}
+
+	public List<Item> getWishList() {
+		List<Item> items = new ArrayList<Item>();
+        try {
+            Statement statement = connection.createStatement();
+            ResultSet rs = statement.executeQuery("select * from "+TABLE+" where wish_list=true");
+            while (rs.next()) {
+                Item item = new Item();
+                item.setId(rs.getInt("id"));
+                item.setName(rs.getString("name"));
+                item.setCategory(Category.valueOf(rs.getString("category")));
+                item.setWishList(rs.getBoolean("wish_list"));
+                items.add(item);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return items;
+	}
 	
 }

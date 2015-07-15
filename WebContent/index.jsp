@@ -54,9 +54,12 @@
     					<c:when test="${item.isWishList()==true}">
         					<span class="glyphicon glyphicon-${item.isWishList()==true?"ok":"minus"} aria-hidden="false"></span>
     						<span >WishList</span>
+    						<a class href="<c:out value="addWishList?action=remove&itemId=${item.getId()}"/>">
+    						<button>X</button></a>
     					</c:when>    
     					<c:otherwise>
-        					<button class="btn btn-notify">+ Add To WishList</button>
+        					<a class href="<c:out value="addWishList?action=add&itemId=${item.getId()}"/>">
+    						<button> + Add to WishList</button></a>
         				<br />
     					</c:otherwise>
 						</c:choose>
@@ -75,8 +78,8 @@
 			</tbody>
 		</table>
 			<div id="button_print" style="text-align: right;margin-top: 20px;">
-				<a href="http://localhost:8080/SAKA_ShoppingList/Print.jsp" target="blank" type="button" class="btn btn-default"><span class="glyphicon glyphicon-print" aria-hidden="true"></span> Print All Items</a>
-				<a href="http://localhost:8080/SAKA_ShoppingList/Print.jsp" target="blank" type="button" class="btn btn-success"><span class="glyphicon glyphicon-print" aria-hidden="true"></span> Print Items To Buy</a>
+				<a href="allItems" type="button" class="btn btn-default"><span class="glyphicon glyphicon-print" aria-hidden="true"></span> Print All Items</a>
+				<a href="wishList" type="button" class="btn btn-success"><span class="glyphicon glyphicon-print" aria-hidden="true"></span> Wish List</a>
 			</div>
 			
 	  	</div>
@@ -90,7 +93,9 @@
 		    	{
 		    		"aoColumnDefs": [
 		    		                 { 'bSortable': false, 'aTargets': [4,5]  }
-		    		              ]
+		    		              ],
+		    		"aaSorting": []
+		    	
 		    	}
 	    		
 		    );

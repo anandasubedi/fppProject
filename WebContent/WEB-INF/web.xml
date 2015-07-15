@@ -24,6 +24,7 @@
   </servlet>
   <servlet-mapping>
     <servlet-name>WishListController</servlet-name>
+    <url-pattern>/wishList</url-pattern>
     <url-pattern>/addWishList</url-pattern>
     <url-pattern>/removeWishList</url-pattern>
   </servlet-mapping>

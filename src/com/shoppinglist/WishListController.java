@@ -1,6 +1,8 @@
 package com.shoppinglist;
 
 import java.io.IOException;
+import java.util.List;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -33,15 +35,21 @@ public class WishListController extends HttpServlet {
 			item = itemRepo.getItemById(id);
 			item.setWishList(true);
 			itemRepo.save(item);
+			response.sendRedirect("");
 		}
-		if(request.getParameter("action")!=null && request.getParameter("action").equals("remove")){
+		else if(request.getParameter("action")!=null && request.getParameter("action").equals("remove")){
 			int id = Integer.parseInt(request.getParameter("itemId"));
 			item = itemRepo.getItemById(id);
 			item.setWishList(false);
 			itemRepo.save(item);
+			response.sendRedirect("");
 		}
-		response.getWriter().append("Served at: ").append(request.getContextPath());
-		response.sendRedirect("");
+		else{
+			List<Item> items = itemRepo.getWishList();
+			request.setAttribute("items", items);
+			response.getWriter().append("Served at: ").append(request.getContextPath());
+			getServletContext().getRequestDispatcher("/wishList.jsp").forward(request, response);
+		}
 	}
 
 	/**

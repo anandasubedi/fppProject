@@ -34,6 +34,7 @@ public class HomeController extends HttpServlet {
 		if(request.getParameter("action")!=null && request.getParameter("action").equals("delete")){
 			int id = Integer.parseInt(request.getParameter("itemId"));
 			itemRepo.deleteItem(id);
+			response.sendRedirect("");
 		}
 		List<Item> items = itemRepo.getAllItems();
 		request.setAttribute("items", items);
