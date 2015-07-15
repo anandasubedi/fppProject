@@ -3,15 +3,19 @@ package com.shoppinglist;
 import java.util.HashSet;
 
 public enum Category {
-	SNACKS ("SNACKS"),
-	FRUITS ("FRUITS"),
-	DRINKS ("DRINKS");
+	DRINKS ("Drinks"),
+	FRUITS ("Fruits"),
+	INGREDIENTS ("Ingredients"),
+	MEAT ("Meat"),
+	SNACKS ("Snacks"),	
+	VEGETABLE ("Vegetable");
 
     private final String category;       
 
     private Category(String s) {
         category = s;
     }
+    
 
     public boolean equalsName(String otherName){
         return (otherName == null)? false:category.equals(otherName);

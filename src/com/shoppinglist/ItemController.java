@@ -45,7 +45,6 @@ public class ItemController extends HttpServlet {
 		request.setAttribute("categories", Category.values());
 		response.getWriter().append("Served at: ").append(request.getContextPath());
 		getServletContext().getRequestDispatcher("/itemForm.jsp").forward(request, response);
-
 	}
 
 	/**
@@ -60,7 +59,7 @@ public class ItemController extends HttpServlet {
 			item = itemRepo.getItemById(Integer.parseInt(request.getParameter("itemId")));
 		}
 		item.setName(request.getParameter("name"));
-		item.setCategory(Category.valueOf(request.getParameter("category")));
+		item.setCategory(Category.valueOf(request.getParameter("category").toUpperCase()));
 		String[] wishLists = request.getParameterValues("wishList");
 		if(wishLists!=null && Integer.parseInt(wishLists[0])==1){
 			item.setWishList(true);
