@@ -9,9 +9,9 @@
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
+<title>Print - ShoppingList</title>
 <script src="bootstrap.js" type="text/javascript"></script>
-<script type="text/javascript">
+<!-- <script type="text/javascript">
 	$(function() {
 		$('#print').prop("disabled", true);
 		$('#print').addClass("btn-default");
@@ -49,17 +49,17 @@
 
 		});
 	})
-</script>
+</script> -->
 </head>
 <body>
-	<div class="container-fluid text-center ">
+	<!--<div class="container-fluid text-center ">
 		<div class="row well">
 			<div class="col-md-2 weell"></div>
 
-			<div class="col-md-8">
-				<div class="panel panel-primary">
+			<div class="col-md-8"> -->
+				<div class="panel panel-primary" style="margin: 20px 50px 20px 50px;">
 					<div class="panel-heading">
-						<h3 class="panel-title">
+						<h3 class="panel-title" style="text-align: center;">
 							<span class="glyphicon glyphicon-shopping-cart"></span> MY
 							SHOPPING
 						</h3>
@@ -68,51 +68,46 @@
 						<table class="table table-striped">
 
 							<tr>
-								<th class="text-center"><input type="Checkbox"
-									name="select" id="selectall"></th>
-								<th class="text-center">S.No</th>
-								<th class="text-center">Priority</th>
-								<th class="text-center">Item Name</th>
-								<th class="text-center">Category</th>
-
-							</tr>
-							<tr align="center">
-								<td><input type="checkbox" name="sn[]" class="sn"
-									value="checked" style="margin-left: auto; margin-right: auto;"></td>
-
-								<td>1</td>
-								<td>high</td>
-								<td>cocola</td>
-								<td>drinks</td>
-							</tr>
-							<tr align="center">
-								<td><input type="checkbox" name="sn[]" class="sn"
-									value="checked" style="margin-left: auto; margin-right: auto;"></td>
-
-								<td>25</td>
-								<td>high</td>
-								<td>fanta</td>
-								<td>drinks</td>
-							</tr>
-							<tr align="center">
-								<td><input type="checkbox" name="sn[]" class="sn"
-									value="checked" style="margin-left: auto; margin-right: auto;"></td>
-								<td>2</td>
-								<td>low</td>
-								<td>rice</td>
-								<td>food</td>
-
-							</tr>
-							<tr align="center">
-								<td><input type="checkbox" name="sn[]" class="sn"
-									value="checked" style="margin-left: auto; margin-right: auto;"></td>
-								<td>3</td>
-								<td>Normal</td>
-								<td>tomato</td>
-								<td>Vegetable</td>
-
+								<!--<th class="text-center"><input type="Checkbox"
+									name="select" id="selectall"></th>  -->
+								<th >No</th>
+								<th >Item Name</th>
+								<th >Category</th>
+								<th >Priority</th>
 							</tr>
 							<tr>
+								<!-- <td><input type="checkbox" name="sn[]" class="sn"
+									value="checked" style="margin-left: auto; margin-right: auto;"></td> -->
+
+								<td>1</td>
+								<td>cocola</td>
+								<td>drinks</td>
+								<td>high</td>
+							</tr>
+							<tr >
+								
+
+								<td>2</td>
+								<td>fanta</td>
+								<td>drinks</td>
+								<td>high</td>
+							</tr>
+							<tr>
+					
+								<td>3</td>
+								<td>rice</td>
+								<td>food</td>
+								<td>low</td>
+
+							</tr>
+							<tr >
+								
+								<td>4</td>
+								<td>tomato</td>
+								<td>Vegetable</td>
+								<td>Normal</td>
+							</tr>
+							<!-- <tr>
 								<td colspan="5"><button type="button" class="btn btn-lg"
 										id="print">
 										<span class="glyphicon glyphicon-print"> </span>Print
@@ -120,14 +115,14 @@
 									<button type="button" class="btn btn-primary btn-lg">
 										<span class="glyphicon glyphicon-remove-circle"></span>Cancel
 									</button></td>
-								</td>
+								</td> -->
 						</table>
 					</div>
 				</div>
-			</div>
+			<!-- </div>
 
 			<div class="col-md-2"></div>
 		</div>
-	</div>
+	</div> -->
 </body>
 </html>
