@@ -82,66 +82,7 @@
 	  	</div>
 	  	<div class="panel-footer" style="text-align: center;">Created by SAKA Team. July 2015</div>
 	</div>
-
-	<!-- Modal Add New -->
-	<div id="add_new" class="modal fade">
-	  <div class="modal-dialog">
-	    <div class="modal-content">
-	      <div class="modal-header">
-	        <h4 class="modal-title">Add New Item</h4>
-	      </div>
-	      <div class="modal-body">
-	        <form class="form-horizontal">
-			  <div class="form-group">
-			    <label for="inputName" class="col-sm-4 control-label">Item Name</label>
-			    <div class="col-sm-8">
-			      <input type="text" class="form-control" id="inputName" placeholder="e.g, Salad">
-			    </div>
-			  </div>
-			  <div class="form-group">
-			    <label for="selectCategory" class="col-sm-4 control-label">Item Category</label>
-			    <div class="col-sm-8">
-			      <select id="selectCategory" class="selectpicker">
-				    <option>Drink</option>
-				    <option>Ingredients</option>
-				    <option>Meat</option>
-				    <option>Snacks</option>
-				    <option>Vegetable</option>
-				  </select>
-			    </div>
-			  </div>
-			  <div class="form-group">
-			    <label for="inputPriority" class="col-sm-4 control-label">Priority</label>
-			    <div class="col-sm-8">
-		      		<label class="radio-inline">
-					 	<input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> High
-					</label>
-					<label class="radio-inline">
-					  <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> Normal
-					</label>
-					<label class="radio-inline">
-					  <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3"> Low
-					</label>
-			    </div>
-			  </div>
-			  <div class="form-group">
-			    <div class="col-sm-offset-4 col-sm-8">
-			      <div class="checkbox">
-			        <label>
-			          <input type="checkbox"> To Buy
-			        </label>
-			      </div>
-			    </div>
-			  </div>
-			</form>
-	      </div>
-	      <div class="modal-footer">
-	        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-	        <button type="button" class="btn btn-primary">Save changes</button>
-	      </div>
-	    </div><!-- /.modal-content -->
-	  </div><!-- /.modal-dialog -->
-	</div><!-- /.modal -->
+	
 	<script>
 		$(document).ready(function() {
 		    $('#all_list').DataTable
