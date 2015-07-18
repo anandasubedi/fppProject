@@ -36,12 +36,14 @@ public class HomeController extends HttpServlet {
 			itemRepo.deleteItem(id);
 			response.sendRedirect("");
 		}
+		else{
 		List<Item> items = itemRepo.getAllItems();
 		request.setAttribute("items", items);
 		request.setAttribute("categories", Category.values());
 		
 		response.getWriter().append("Served at: ").append(request.getContextPath());
 		getServletContext().getRequestDispatcher("/index.jsp").forward(request, response);
+		}
 	}
 
 	/**
